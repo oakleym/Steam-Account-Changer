@@ -66,6 +66,7 @@ $main_form.Controls.Add($Label)
 # Add Username Selector
 $Usernames = New-Object System.Windows.Forms.ComboBox
 $Usernames.Width = 120
+$Usernames.DropDownStyle = 'DropDownList'
 $txtusers = Get-Content -Path $SAC_Usernames
 ForEach ($user in $txtusers)
 {
@@ -180,6 +181,7 @@ ForEach ($user in $txtusers)
 $Editor_UsernameBox.Items.Add($user);
 $Usernames.Items.Add($user);
 }
+$Editor_UsernameBox.ResetText()
 }
 )
 
